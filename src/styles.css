@@ -1,0 +1,204 @@
+/* App-eigener Class */
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("fonts/myfont.woff2") format("woff2"),
+    url("fonts/myfont.woff") format("woff"),
+    url("fonts/myfont.ttf") format("truetype");
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Das HTML-Dokument selbst wird von
+   allen Abstandswerten befreit und
+   erhält einen abweichenden 
+   Hintergrundfarbe, als der Inhalt selbst */
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(210, 215, 220);
+}
+
+/* Der Inhalt hat eine maximale Breite und
+   die Hintergrundfarbe ist weiß */
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* Der Main-Tag, in dem der eigentliche
+   Inhalt gepackt wird */
+main {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+/* Jedes Rezept liegt in einer DIV
+   mit dieser Klasse */
+.struktur {
+  border-radius: 15px;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 15px 0;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Das ist der Bereich, in der
+   ein Bild und ein Rezept 
+   gepackt wird */
+.struktur .beide {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Die beiden Bereiche jeweils für Bild
+   und Rezept */
+.struktur .beide .links,
+.struktur .beide .rechts {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  text-align: left;
+}
+/* Titelfeld der Struktur */
+.struktur .titel {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+/* Der Bild in einem der beiden Bereiche */
+.struktur img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Tabellenzeilen-Farbe bei geraden Zahlen */
+.struktur table tr:nth-child(even) {
+  background-color: rgb(245, 245, 255);
+}
+
+/* Tabellenzeilen-Farbe bei ungeraden Zahlen */
+.struktur table tr:nth-child(odd) {
+  background-color: rgb(210, 210, 229);
+}
+
+/* Style der Zutaten */
+.struktur .zutaten {
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgb(190, 195, 200);
+  padding: 10px 20px;
+  line-height: 26px;
+  font-size: 16px;
+}
+/* Beschreibungsteil der Struktur */
+.struktur .beschreibung {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 10px 20px;
+  font-weight: normal;
+}
+/* Untertitel */
+.struktur .subtitel {
+  padding: 8px;
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Navigationsleiste */
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(235, 235, 235);
+  opacity: 0.95;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigations-Link */
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Navigation Link-Unterklasse */
+nav a .MenuItem {
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Navigation Link-Unterklasse beim 
+   Maus-Drüber-Rollen oder Vormarkierung */
+nav a .MenuItem:hover,
+nav a .HoverMenuItem,
+.HoverMenuItem {
+  padding: 15px;
+  text-decoration: none;
+  background-color: rgb(206, 206, 206);
+  color: #333;
+}
+
+/* Fußzeile */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+  opacity: 0.95;
+  font-size: 11px;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+/* Infobox der auf allen Seiten erscheint */
+.infobox {
+  text-align: center;
+  background-color: rgb(240, 240, 200);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(200, 200, 160);
+  margin-bottom: 20px;
+  box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Infobox erste Textzeile */
+.infobox h1 {
+  font-size: 22px;
+  color: rgb(80, 120, 20);
+}
+
+/* Infobox erste Textzeile "Round 2" */
+.infobox h1 span {
+  color: rgb(160, 60, 50);
+}
+
+/* Infobox zweite Textzeile */
+.infobox h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Infobox dritte Textzeile */
+.infobox h5 {
+  font-size: 16px;
+  color: #333;
+}
